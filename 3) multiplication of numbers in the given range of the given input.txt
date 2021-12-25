@@ -1,0 +1,40 @@
+3)Write a program to find the multiplication of numbers in the given range of the given input.
+Input Format:
+
+Input consists of three Integer.
+
+third input consists of range of multiplication
+
+Output Format:
+
+Output consists of Integer.
+
+Sample Input:
+
+2
+
+2
+
+5
+
+Sample Output:
+
+2 2 4 8 16 32 64
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n, i, multiple;
+    int arr[20];
+    scanf("%d%d%d", &arr[0], &multiple, &n);
+    for(i = 1; i < n+1; i++){
+        arr[i] = arr[i-1]*multiple;
+    }
+    printf("%d ", multiple);
+    for(i = 0; i < n+1; i++){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}

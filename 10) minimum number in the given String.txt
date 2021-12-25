@@ -1,0 +1,19 @@
+10)Write program to find the minimum number in the given String.
+Input format:
+
+The Input consists of String
+
+Output format:
+
+The Output consists of Integer
+
+Sample Input:
+
+12pro4gra90m
+
+Sample Output:
+
+4
+
+//solution in c
+

@@ -1,0 +1,114 @@
+1.Area Calculation
+Sheela has three things in her bag. She wants to compute the area of 3 things but 3 things are in different shapes. The three things are in a square shape, rectangular shape, and circular shape respectively.  Write a program to help Sheela to calculate the area of different shapes.
+Input format:
+
+First input: a side of a square in integer
+
+Second input: length of a rectangle in integer
+
+Third input: breadth of a rectangle in integer
+
+Fourth input: radius of a circle in float
+
+
+
+Output format:
+
+The first output should be the area of a square in integer
+
+The second output should be the area of a rectangle in integer
+
+The third output should be the area of a circle in float with 2 decimal places
+
+
+
+Sample Input:
+
+5
+
+5
+
+4
+
+2.0
+
+
+
+Sample Output:
+
+25
+
+20
+
+12.56
+
+Input (stdin)
+10
+15
+15
+4.5
+
+Output (stdout)
+100
+225
+63.58
+
+Case 2
+Input (stdin)
+2
+3
+6
+5.0
+
+Output (stdout)
+4
+18
+78.50
+
+
+//solution in c 
+#include <stdio.h>
+const float PI = 3.14;
+
+int main(){
+    int side, length, breadth;
+    float radius;
+    scanf("%d\n%d\n%d\n%f", &side, &length, &breadth, &radius);
+    int Area_square = side * side;
+    int Area_rectangle = length * breadth;
+    float Area_circle = PI * radius * radius;
+    printf("%d\n%d\n%.2f", Area_square, Area_rectangle, Area_circle);
+    return 0;
+}
+
+
+//solution in c++
+#include <iostream>
+#include<bits/stdc++.h>
+const float PI = 3.14;
+
+using namespace std;
+
+int main(){
+    int side, length, breadth;
+    float radius;
+    cin >> side >> length >> breadth >> radius;
+    int Area_square = side * side;
+    int Area_rectangle = length * breadth;
+    float Area_circle = PI * radius * radius;
+    cout << Area_square << "\n" << Area_rectangle << "\n" << fixed << setprecision(2) << Area_circle;
+    return 0;
+}
+
+
+#solution in python
+a = int(input())
+length = int(input())
+breadth = int(input())
+radius = float(input())
+Area_square = a * a
+Area_rectangle = length * breadth
+Area_circle = 3.14 * radius * radius
+print(Area_square)
+print(Area_rectangle)
+print("%.2f"%Area_circle)

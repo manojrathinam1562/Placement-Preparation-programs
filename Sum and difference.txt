@@ -1,0 +1,79 @@
+1.
+Sum and Difference
+Write a program to get 2 numbers from the user and calculate their sum and difference using '+' and '-' operators respectively. Print the corresponding sum and difference of the numbers as output in the console.
+Input format:
+
+First input: an integer
+
+Second input: an integer
+
+
+
+Output format:
+
+First output will be the sum of two integers
+
+Second output will be the difference of two integers
+
+
+
+Sample Input:
+
+55
+
+34
+
+
+
+Sample Output:
+
+89
+
+21
+
+Case 1
+Input (stdin)
+-98
+-5
+
+Output (stdout)
+-103
+-93
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int first_num, second_num;
+    scanf("%d\n%d", &first_num, &second_num);
+    int sum = first_num + second_num;
+    int difference = first_num - second_num;
+    printf("%d\n%d", sum, difference);
+    return 0;
+}
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int first_num, second_num;
+    cin >> first_num >> second_num;
+    int sum = first_num + second_num;
+    int difference = first_num - second_num;
+    cout << sum << endl << difference;
+    return 0;
+}
+
+
+#solution in python
+first_num = int(input())
+second_num = int(input())
+add = first_num + second_num
+difference = first_num - second_num
+print(add)
+print(difference)

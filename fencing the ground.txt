@@ -1,0 +1,93 @@
+10.
+
+Fencing The Ground
+The college ground is rectangular in shape. Management decides to build a fence around the ground. In order to help the construction workers to build a straight fence, they planned to place a thick rope around the ground. They wanted to buy only the exact length of the rope that is needed. They also wanted to cover the entire ground with a thick carpet during the rainy season. They wanted to buy only the exact quantity of carpet that is needed. They requested your help. Can you please help them by writing a program to find the exact length of the rope and the exact quantity of carper that is required?
+Input Format:
+
+Input consists of 2 integers.
+
+The first integer corresponds to the length of the ground
+
+The second integer corresponds to the breadth of the ground.
+
+
+
+Output Format:
+
+Output consists of 2 integers.
+
+The first integer corresponds to the exact length of the rope
+
+The second integer corresponds to the exact quantity of carper.
+
+
+
+Sample Input:
+
+50
+
+20
+
+
+
+Sample Output:
+
+140m
+
+1000sqm
+
+Case 1
+Input (stdin)
+80
+20
+
+Output (stdout)
+200m
+1600sqm
+
+Case 2
+Input (stdin)
+20
+90
+
+Output (stdout)
+220m
+1800sqm
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int length, breadth;
+    scanf("%d\n%d", &length, &breadth);
+    int rope_length = (length+breadth) * 2;
+    int carpet = length*breadth;
+    printf("%dm\n%dsqm", rope_length, carpet);
+    return 0;
+}
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int length, breadth;
+    cin >> length >> breadth;
+    int rope_length = (length+breadth) * 2;
+    int carpet = length*breadth;
+    cout << rope_length << "m" << endl << carpet << "sqm";
+    return 0;
+}
+
+
+#solution in python
+length = int(input())
+breadth = int(input())
+rope_length = (length + breadth) * 2
+carpet = length * breadth
+print(str(rope_length)+"m")
+print(str(carpet)+"sqm")

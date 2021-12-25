@@ -1,0 +1,95 @@
+Program-12th november
+
+Task
+
+Given three values - Start Fahrenheit Value (S), End Fahrenheit value (E), and Step Size (W), you need to convert all Fahrenheit values from Start to End at the gap of W into their corresponding Celsius values and print the table.
+Note:
+Print the floor of the Celsius values if they are non-negative else print its ceil value. 
+
+Input Format :
+
+The first line of input contains a single integer S, representing the Start Fahrenheit Value.
+
+The second line of input contains a single integer E, representing the end Fahrenheit Value.
+
+The third line of input contains a single Integer W, representing the Step Size.
+
+Output Format :
+
+Print the Fahrenheit and corresponding tab-separated ("\t") Celcius value in a single line.
+
+Output for every Fahrenheit and corresponding Celsius value will be printed in a separate line.
+
+Constraints :
+
+0 <= S <= 80
+S <= E <=  900
+0 <= W <= 40 
+
+Sample Input 1:
+
+0 
+100 
+20
+
+Sample Output 1:
+
+0   -17
+20  -6
+40  4
+60  15
+80  26
+100 37
+
+Sample Input 2:
+
+20
+119
+13
+
+Sample Output 2:
+
+20  -6
+33  0 
+46  7
+59  15
+72  22
+85  29
+98  36
+111 43
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int start, end, skip;
+    scanf("%d\n%d\n%d", &start, &end, &skip);
+    int celcius;
+    while(start <= end){
+        celcius = (start - 32) * 5/9;
+        printf("%d\t%d\n", start, celcius);
+        start += skip;
+    }
+    return 0;
+}
+
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int start, finish, skip;
+    cin >> start >> finish >> skip;
+    int celcius;
+    while(start <= finish){
+        celcius = (start - 32) * 5/9;
+        cout << start << "\t" << celcius << endl;
+        start += skip;
+    }
+    return 0;
+}

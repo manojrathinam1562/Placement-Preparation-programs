@@ -1,0 +1,95 @@
+8.
+Power of a Number
+pow() function is used to calculate the power of any base and it is defined in java.lang.Math package. Write a program to read X as the base and N as the power and calculate the result (X^N - X to the power of N).
+Input format:
+
+The first line containing integer denotes the base(X)
+
+The second line containing integer denotes the power(N)
+
+
+
+Output format:
+
+Print the power of a number
+
+
+
+Sample Input:
+
+2
+
+3
+
+
+
+Sample Output:
+
+8
+
+Case 1
+Input (stdin)
+3
+2
+
+Output (stdout)
+9
+
+Case 2
+Input (stdin)
+5
+6
+
+Output (stdout)
+15625
+
+Case 3
+Input (stdin)
+2
+0
+
+Output (stdout)
+1
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int x, n;
+    scanf("%d\n%d", &x, &n);
+    int power = 1;
+    for(int i = 1; i <= n; i++){
+        power *= x;
+    }
+    printf("%d", power);
+    return 0;
+}
+
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int x, n;
+    cin >> x >> n;
+    int power = 1;
+    for(int i = 1; i <= n; i++){
+        power *= x;
+    }
+    cout << power;
+    return 0;
+}
+
+
+#solution in python
+x = int(input())
+n = int(input())
+power = 1
+for i in range(n):
+    power *= x
+print(power)

@@ -1,0 +1,108 @@
+Program-10th november
+
+Task
+
+In this task it covers the topic of String
+
+String myString = "Hello World!"
+
+The elements of a String are called characters. The number of characters in a String is called the length, and it can be retrieved with the String.length() method.
+
+Given two strings of lowercase English letters, A and B, perform the following operations:
+
+Sum the lengths of  A and B.
+Determine if A is lexicographically larger than B (i.e.: does B come before A in the dictionary?).
+Capitalize the first letter in A and B and print them on a single line, separated by a space.
+
+Input Format
+
+The first line contains a string A. 
+The second line contains another string B. 
+The strings are comprised of only lowercase English letters.
+
+Output Format
+
+There are three lines of output:
+For the first line, sum the lengths of A and B.
+For the second line, write Yes if A is lexicographically greater than B otherwise print No instead.
+For the third line, capitalize the first letter in both A and B and print them on a single line, separated by a space.
+
+Sample Input
+
+hello
+java
+
+Sample Output
+
+9
+No
+Hello Java
+
+Explanation
+
+String A  is "hello" and B is "java".
+
+A has a length of 5, and B has a length of 4; the sum of their lengths is 9.
+When sorted alphabetically/lexicographically, "hello" precedes "java"; therefore, A is not greater than B and the answer is No.
+
+When you capitalize the first letter of both A and B and then print them separated by a space, you get "Hello Java".
+
+
+
+Solution in C
+
+#include <stdio.h>
+
+int main()
+{
+    char str[20],str2[20];
+    scanf("%s%s",str,str2);
+    printf("%d\n",strlen(str)+strlen(str2));
+    printf("%s\n",str[0]>str2[0]?"Yes":"No");
+    str[0]=toupper(str[0]);
+    str2[0]=toupper(str2[0]);
+    printf("%s %s",str,str2);
+    return 0;
+}
+
+Solution in C++
+
+#include <iostream>
+#include<string>
+using namespace std;
+int main()
+{
+    string str,str2;
+    cin>>str>>str2;
+    cout<<str.length()+str2.length()<<endl;
+    cout<<(str.at(0)>str2.at(0))?"Yes":"No";
+    cout<<endl;
+    cout<<(char)toupper(str.at(0))<<str.substr(1,str.length())<<" ";
+    cout<<(char)toupper(str2.at(0))<<str2.substr(1,str2.length());
+    return 0;
+}
+
+Solution in Java
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String str=sc.nextLine(),str2=sc.nextLine();
+		System.out.println(str.length()+str2.length());
+		System.out.println(str.charAt(0)>str2.charAt(0)?"Yes":"No");
+		System.out.print(Character.toUpperCase(str.charAt(0))+str.substring(1,str.length()))
+     System.out.print(" ");
+     System.out.print(Character.toUpperCase(str2.charAt(0)));
+     System.out.print(str2.substring(1,str2.length()));
+	}
+}
+
+Solution in Python
+
+string=str(input())
+string2=str(input())
+print(len(string)+len(string2))
+print("Yes" if string[0]>string2[0] else "No")
+print(string.capitalize(),string2.capitalize(),sep=" ")

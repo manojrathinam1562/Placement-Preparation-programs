@@ -1,0 +1,97 @@
+program :
+write a program to check whether a number is palindrome or not.
+
+Definition:
+when you reverse a given integer if it is same as before then it is called palindrome number.
+
+sample input 1:
+121
+
+sample output 1:
+true
+
+sample input 2:
+135
+
+sample output 2:
+false
+
+
+//solution in c
+#include <stdio.h>
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    int temp = n, sum = 0, r;
+    while(temp > 0){
+        r = temp % 10;
+        temp = temp / 10;
+        sum = r + (sum*10);
+    }
+    printf((sum == n)?"true":"false");
+
+    return 0;
+}
+
+or
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int num;
+    scanf("%d", &num);
+    int temp = num, rem, sum = 0;
+    while(temp > 0){
+        rem = temp % 10;
+        temp = temp / 10;
+        sum = (sum*10) + rem;
+    }
+    if(sum == num){
+        printf("True");
+    }
+    else{
+        printf("False");
+    }
+    return 0;
+}
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int n;
+    cin >> n;
+    int temp = n, sum = 0, r;
+    while(temp > 0){
+        r = temp % 10;
+        temp = temp / 10;
+        sum = r + (sum*10);
+    }
+    if(sum == n){
+        cout << "true";
+    }
+    else{
+        cout << "false";
+    }
+
+    return 0;
+}
+
+
+#solution in python
+n = int(input())
+temp = n
+sum = 0
+while(temp > 0):
+    r = temp % 10
+    temp = temp // 10
+    sum = r + (sum * 10)
+if(sum == n):
+    print("true")
+else:
+    print("false")

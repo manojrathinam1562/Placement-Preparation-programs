@@ -1,0 +1,39 @@
+Fibanoci series
+
+input:
+input contains the size of the series.
+
+output:
+output is to print the series of given size.
+
+sample input 0:
+4
+
+sample output 0:
+0 1 1 2
+
+sample input 1:
+7
+
+sample output 1:
+0 1 1 2 3 5 8 
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[20] = {0, 1};
+    int i;
+    for(i = 2; i < n; i++){
+        arr[i] = arr[i-1] + arr[i-2];
+    }
+    for(i = 0; i < n; i++){
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}

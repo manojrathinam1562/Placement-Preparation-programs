@@ -1,0 +1,42 @@
+13)Write a program to find the missing element in the given array.
+Input format:
+
+The input consist of Integers
+
+Output format:
+
+The output consists of Integer
+
+Sample Input:
+
+7
+
+71 72 73 74 76 77 78
+
+Sample Output:
+
+75
+
+
+//solution in c
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    int arr[n], i;
+    for(i = 0; i < n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int start = arr[0];
+    for(i = 0; i < n; i++){
+        if(start != arr[i]){
+            printf("%d", start);
+            break;
+        }
+        else{
+            start++;
+        }
+    }
+    return 0;
+}

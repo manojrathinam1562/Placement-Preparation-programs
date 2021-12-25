@@ -1,0 +1,39 @@
+14)Write a program to find the sum of even position in the given array.
+Input Format:
+
+Input consists of Integer
+
+Output Format:
+
+Output consists of Integer
+
+Sample Input:
+
+5
+
+10 20 30 40 50
+
+Sample Output:
+
+90
+
+
+//solution in c
+#include <stdio.h>
+
+int main() {
+	// Your code goes here
+	int n;
+	scanf("%d", &n);
+	int arr[n];
+	int sum = 0, i = 0;
+	for(; i < n; i++){
+		scanf("%d", &arr[i]);
+		if(i % 2 == 0){
+			sum += arr[i];
+		}
+	}
+	printf("%d", sum);
+
+	return 0;
+}

@@ -1,0 +1,49 @@
+Problem Statement:
+
+For a given positive num, identify the palindrome formed by performing following operations.
+> Add num and its reverse
+> Check whether the sum is palindrome or not. If not, add the sum and its reverse and repeat the process until a palindrome is obtained.
+
+sample input 1 : 124
+sample output 2: 545
+
+sample input 2 : 4
+sample output 2: 8
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int reverse_num(int num){
+    int rem, rev = 0;
+    while(num > 0){
+            rem = num % 10;
+            num = num / 10;
+            rev = (rev*10) + rem;
+    }
+    return rev;
+}
+int main(){
+    int num;
+    cin >> num;
+
+    num = num + reverse_num(num);
+
+    int temp, rem, sum = 0;
+
+    while(num != sum){
+        num = num + sum;
+        sum = 0;
+        temp = num;
+        while(temp > 0){
+            rem = temp % 10;
+            temp = temp / 10;
+            sum = (sum*10) + rem;
+        }
+    }
+
+    cout << sum;
+    return 0;
+}

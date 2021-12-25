@@ -1,0 +1,31 @@
+2)Write a program to Extract second last digit.
+Note:Get an integer from the user and print second last digit.
+
+Input Format:
+
+Input consists of Integer
+
+Output Format:
+
+Output consists of Integer
+
+Sample Input:
+
+12345
+
+Sample Output:
+
+4
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n;
+    scanf("%d", &n);
+    int num = n / 10;
+    int second_digit = num % 10;
+    printf("%d", second_digit);
+    return 0;
+}

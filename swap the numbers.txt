@@ -1,0 +1,80 @@
+3.
+Swapping two numbers
+Write a java program to get 2 numbers from the user and swap their values without any loss of data. You can make use of additional variable for swapping. Print the corresponding swapped values of the two numbers as output in the console.
+Input format:
+
+First input: an integer
+
+Second input: an integer
+
+
+
+Output format:
+
+The output will be integers(swapped values)
+
+
+
+Sample Input:
+
+20
+
+10
+
+
+
+Sample Output:
+
+10
+
+20
+
+Case 1
+Input (stdin)
+20
+10
+
+Output (stdout)
+10
+20
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int num_1, num_2;
+    scanf("%d\n%d", &num_1, &num_2);
+    int temp = num_1;
+    num_1 = num_2;
+    num_2 = temp;
+    printf("%d\n%d", num_1, num_2);
+    return 0;
+}
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int num_1, num_2;
+    cin >> num_1 >> num_2;
+    int temp = num_1;
+    num_1 = num_2;
+    num_2 = temp;
+    cout << num_1 << endl << num_2;
+    return 0;
+}
+
+
+#solution in python
+num_1 = int(input())
+num_2 = int(input())
+temp = num_1
+num_1 = num_2
+num_2 = temp 
+print(num_1)
+print(num_2)

@@ -1,0 +1,30 @@
+6) write a program to find the power of a given number using recursion.
+
+Input format:
+Input consists of integers.
+
+Output format:
+Output consists of integer.
+
+sample input:
+3
+4
+
+sample output:
+81
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int val, n;
+    scanf("%d%d", &val, &n);
+    int sum = 1;
+    for(int i = 1; i <= n; i++){
+        sum *= val;
+    }
+    printf("%d", sum);
+    return 0;
+}

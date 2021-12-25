@@ -1,0 +1,88 @@
+2.
+Product and Division
+Write a program to get 2 numbers from the user and calculate their product, quotient, and remainder using '*', '/' and '%' operators respectively. Print the corresponding product, quotient and remainder of the numbers as output in the console.
+Input format:
+
+First input: an integer
+
+Second input: an integer
+
+
+
+Output format:
+
+The first output will be the product of two integers
+
+The second output will be the quotient
+
+The third output will be the remainder
+
+
+
+Sample Input:
+
+50
+
+10
+
+
+
+Sample Output:
+
+500
+
+5
+
+0
+
+Case 1
+Input (stdin)
+50
+10
+
+Output (stdout)
+500
+5
+0
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int num_1, num_2;
+    scanf("%d\n%d", &num_1, &num_2);
+    int product = num_1 * num_2;
+    int quotient = num_1/num_2;
+    int remainder = num_1 % num_2;
+    printf("%d\n%d\n%d", product, quotient, remainder);
+    return 0;
+}
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int num_1, num_2;
+    cin >> num_1 >> num_2;
+    int product = num_1 * num_2;
+    int quotient = num_1/num_2;
+    int remainder = num_1 % num_2;
+    cout << product << endl << quotient << endl << remainder;
+    return 0;
+}
+
+
+#solution in python
+num_1 = int(input())
+num_2 = int(input())
+product = num_1 * num_2
+quotient = num_1 // num_2
+remainder = num_1 % num_2
+print(product)
+print(quotient)
+print(remainder)

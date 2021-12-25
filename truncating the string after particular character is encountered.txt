@@ -1,0 +1,72 @@
+truncating the string after particular character is encountered.
+
+input:
+The first line denotes the value of S.
+The second line denotes the value of C.
+
+Output:
+The first line contains the string value S till is encountered.
+
+Boundary conditions:
+Length of S is from 3 to 100.
+
+Sample input 0:
+manager
+e
+
+sample output 0:
+manag
+
+sample input 1:
+Everest 
+e
+
+sample Output 1:
+Ev
+
+Explanation:
+As the input character C is e Which is in lower case, the first letter in Everest < upper case E is ignored and the string S printed till a lower case e is encountered.
+
+//solution in C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    char arr[100], find;
+    scanf("%s %c", arr, &find);
+    int i = 0;
+    while(arr[i] != '\0'){
+        if(arr[i] != find){
+            printf("%c", arr[i]);
+        }
+        else{
+            break;
+        }
+        i+=1;
+    }
+    return 0;
+}
+
+//solution in C#
+using System;
+using System.Collections;
+class HelloWorld
+{
+    static void Main(string[] args)
+    {
+        char[] arr;
+        arr = Console.ReadLine().ToCharArray();
+        char find = Console.ReadLine()[0];
+        for (int i = 0; i < arr.Length; i++) {
+            if (arr[i] != find)
+            {
+                Console.Write(arr[i]);
+            }
+            else {
+                break;
+            }
+        }
+        Console.ReadKey();
+    }
+}

@@ -1,0 +1,80 @@
+4.
+Swapping two numbers without third variable
+Write a java program to swap two values without using the 3rd variable.
+Input format:
+
+First input: an integer
+
+Second input: an integer
+
+
+
+Output format:
+
+The output will be integers(swapped values)
+
+
+
+Sample Input:
+
+10
+
+20
+
+
+
+Sample Output:
+
+20
+
+10
+
+Case 1
+Input (stdin)
+10
+20
+
+Output (stdout)
+20
+10
+
+
+//solution in c
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int num_1, num_2;
+    scanf("%d\n%d", &num_1, &num_2);
+    num_1 = num_1 + num_2;
+    num_2 = num_1 - num_2;
+    num_1 = num_1 - num_2;
+    printf("%d\n%d", num_1, num_2);
+    return 0;
+}
+
+
+//solution in c++
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int num_1, num_2;
+    cin >> num_1 >> num_2;
+    num_1 = num_1 + num_2;
+    num_2 = num_1 - num_2;
+    num_1 = num_1 - num_2;
+    cout << num_1 << endl << num_2;
+    return 0;
+}
+
+
+#solution in python
+num_1 = int(input())
+num_2 = int(input())
+num_1 = num_1 + num_2
+num_2 = num_1 - num_2
+num_1 = num_1 - num_2
+print(num_1)
+print(num_2)
